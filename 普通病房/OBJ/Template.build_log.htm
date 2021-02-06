@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.27.0.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ccg hp, df, LIC=21ETG-VPX26-M93GG-VC2QJ-NW0Z2-V12LE
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.27.0.0
+Toolchain Path:  d:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.27.0.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+E:\练习\项目资料\毕业设计\万维佳\普通病房\USER\Template.uvprojx
+Project File Date:  01/30/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'd:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Template'
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling delay.c...
+compiling main.c...
+main.c(85): warning:  #177-D: variable "adcx"  was declared but never referenced
+  	u16 adcx,adco;
+main.c(85): warning:  #177-D: variable "adco"  was declared but never referenced
+  	u16 adcx,adco;
+main.c: 2 warnings, 0 errors
+compiling usart.c...
+compiling core_cm3.c...
+compiling sys.c...
+assembling startup_stm32f10x_md.s...
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_rcc.c...
+compiling esp8266.c...
+compiling MqttKit.c...
+compiling led.c...
+compiling beep.c...
+compiling onenet.c...
+..\NET\onenet\onenet.c(101): warning:  #177-D: variable "i"  was declared but never referenced
+  	static int i = 0;
+..\NET\onenet\onenet.c(197): warning:  #177-D: variable "dataPtr"  was declared but never referenced
+  	char *dataPtr = NULL;
+..\NET\onenet\onenet.c(198): warning:  #177-D: variable "numBuf"  was declared but never referenced
+  	char numBuf[10];
+..\NET\onenet\onenet.c(199): warning:  #177-D: variable "num"  was declared but never referenced
+  	int num = 0;
+..\NET\onenet\onenet.c: 4 warnings, 0 errors
+compiling dht11.c...
+compiling adc.c...
+compiling ds18b20.c...
+compiling key.c...
+linking...
+Program Size: Code=12764 RO-data=268 RW-data=96 ZI-data=1864  
+FromELF: creating hex file...
+"..\OBJ\Template.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.1.0.5.pack
+                Keil.STM32F1xx_DFP.1.0.5
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Template
+  d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>
