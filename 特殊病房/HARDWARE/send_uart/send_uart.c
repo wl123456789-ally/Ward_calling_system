@@ -53,14 +53,29 @@ ch2：蓝色
 void send_wave(int ch0,int ch1,int ch2)
 {
   char str1[50];
-  sprintf(str1,"add 1,0,%d",ch0);
-  USARTx_Send(USART3,str1,strlen(str1));
-  USARTx_Send(USART3,hex_END,3);   //多发几次，使x间隔数据变大
-	USARTx_Send(USART3,hex_END,3);
-	USARTx_Send(USART3,hex_END,3);
-	USARTx_Send(USART3,hex_END,3);
-	USARTx_Send(USART3,hex_END,3);
-	USARTx_Send(USART3,hex_END,3);
+	int i = 0,temp;
+	static int last_val = 0;
+	for(i = 0;i<10;i++)         //本次数据与上次数据插入9个点的数据，拉开x轴的间距
+	{
+		temp = (ch0 - last_val)/10.0;
+		
+		sprintf(str1,"add 1,0,%d",temp*i + last_val);
+		USARTx_Send(USART3,str1,strlen(str1));
+		USARTx_Send(USART3,hex_END,3);   
+		
+
+	}
+	
+	last_val = ch0;
+//	  USARTx_Send(USART3,str1,strlen(str1));
+//  USARTx_Send(USART3,hex_END,3);   //多发几次，使x间隔数据变大
+
+//	  USARTx_Send(USART3,str1,strlen(str1));
+//  USARTx_Send(USART3,hex_END,3);   //多发几次，使x间隔数据变大
+
+//	  USARTx_Send(USART3,str1,strlen(str1));
+//  USARTx_Send(USART3,hex_END,3);   //多发几次，使x间隔数据变大
+
 //  USARTx_Send(USART3,hex_END,3);
 //  sprintf(str1,"add 1,1,%d",ch1);
 //  USARTx_Send(USART2,str1,strlen(str1));

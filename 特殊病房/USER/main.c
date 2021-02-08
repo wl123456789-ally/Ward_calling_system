@@ -119,7 +119,7 @@ int main(void)
 			send_wave(ADC_ConvertedValue[0]/21,0,0);   //发送心电波形到串口屏
 		
 		
-		TransmitUserCurve_s32(0xf1,ADC_ConvertedValue[0]);
+//	TransmitUserCurve_s32(0xf1,ADC_ConvertedValue[0]);
 		deal_key_val();   //处理按键数据		
 		
 		timeCount ++;
@@ -149,7 +149,7 @@ int main(void)
 			LED = 0;
 			i = 0;
 		}
-		delay_ms(5);
+		delay_ms(20);
 	}
 }
 
